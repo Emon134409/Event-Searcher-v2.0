@@ -1,0 +1,24 @@
+create or replace function SHOWNAMEDATE(COUNTER OUT NUMBER,DFROM IN VARCHAR2,TFROM IN VARCHAR2 ) 
+return NAMEARR IS 
+--COUNTER NUMBER; 
+NAM NAMEARR; 
+J NUMBER; 
+TNAME VARCHAR2(20); 
+JNAME VARCHAR2(20); 
+ffdate date;
+tdate date;
+CURSOR SHOWN IS 
+SELECT NAME,FDATE FROM FEST WHERE EXIST =1; 
+BEGIN 
+ffdate:=to_date(DFROM,'MM,DD,YYYY');
+tdate:=to_date(TFROM,'MM,DD,YYYY');
+NAM :=NAMEARR(); 
+J :=1; 
+FOR I IN SHOWN LOOP NAM.EXTEND;  
+IF I.FDATE between ffdate AND tdate THEN NAM(J) :=I.NAME; 
+J :=J+1; 
+END IF; 
+END LOOP; 
+COUNTER :=J-1; 
+return nam; 
+END;

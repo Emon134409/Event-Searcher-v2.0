@@ -1,0 +1,6 @@
+ALTER TABLE organizer
+DROP COLUMN description;
+
+
+ALTER TABLE organizer
+DROP COLUMN oimage;

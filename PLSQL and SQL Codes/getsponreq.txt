@@ -1,0 +1,9 @@
+
+create or replace procedure getsponrid(sname in varchar2,sid out number)
+is
+begin
+select id into sid
+from sponsor
+where name=sname;
+end;
+/

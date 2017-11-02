@@ -1,0 +1,22 @@
+man man – an interface to the online reference manuals.
+passwd – change (own) password.
+passwd user change the password of user user (root only)
+ls – list directory contents.
+ls -al – long list
+ls -alt – long list, sorted by modification time
+ls -alS – long list (GNU/Linux only), sorted by file size
+cd directory – change to directory
+cd – change to default/home directory
+pwd – show current directory
+Basic File Utilities
+cp file1 file2 – copy file1 to file2
+rm file1 – remove (delete) file1
+mv file1 file2 move (change) file1 to file2
+mkdir dir make directory dir
+rmdir dir remove directory dir
+More File Utilities
+cat file – read a file
+more file – read a file per screen
+ln -s – file sfile – make a symbolic link from file to sfile
+grep aword file – search string aword inside file using regular expression
+sort file – sort a file
